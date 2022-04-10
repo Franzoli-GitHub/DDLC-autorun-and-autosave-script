@@ -1,0 +1,29 @@
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+source  =  ; Adjust path as needed
+target  =  ; Adjust path as needed
+SoundBeep, 1500
+Process, Exist,
+winwait, Monika After Story ;
+SoundBeep, 1200
+WinWaitClose                    ; Wait for game window to close
+SoundBeep, 900, 1000
+FileRecycle, %target%           ; Delete existing target files & directory
+FileCopyDir, %source%, %target% ; Copy the source directory
+If ErrorLevel
+     MsgBox, 48, Error, An error occurred while copying the directory.
+     MsgBox, 64, Done, Done!, 4
+     winwait, Monika After Story ;
+soundbeep, 1400, 1000
+reload 
+
+
+
+
+
+Escape::
+ExitApp
+Return
