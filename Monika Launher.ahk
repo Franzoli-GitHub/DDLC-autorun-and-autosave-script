@@ -8,16 +8,11 @@ ifmsgbox ok
 {
     run, Auto Backup- Monika.ahk
     run, Auto Backup-Yuri.ahk
-    run, 
-    
 }
 else
     exitapp
     return 
-   
-
-
-sleep 11000
+sleep 1000
 exitapp
 Return 
 
