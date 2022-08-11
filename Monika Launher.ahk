@@ -7,7 +7,6 @@ msgbox, 1,DDLC.exe,this will launch DDLC after story
 ifmsgbox ok
 {
     run, Auto Backup- Monika.ahk
-    run, Auto Backup-Yuri.ahk
 }
 else
     exitapp
